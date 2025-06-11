@@ -16,11 +16,11 @@ This app helps me keep track of climbing problems I've tried, completed, or fail
 ## 📦 Features
 
 - Log climbs with:
-  - Title, color, grade
+  - Title, color
   - Thumbnail and multiple media entries (video/images)
   - Notes (Markdown)
-  - Attempt status & date
-- Dynamic frontend page for viewing all climbs
+  - Date
+- Dynamic frontend page for viewing all climbs (coming soon!)
 - Sortable/filterable (coming soon!)
 - Uses Strapi API with `populate=*` to fetch all media and data
 
