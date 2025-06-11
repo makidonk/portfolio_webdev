@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "climbs",
+  "info": {
+    "singularName": "climb",
+    "pluralName": "climbs",
+    "displayName": "climb"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "grön",
+        "blå",
+        "röd",
+        "svart",
+        "vit"
+      ]
+    },
+    "description": {
+      "type": "richtext",
+      "default": "Hur gick det?"
+    },
+    "media_items": {
+      "type": "component",
+      "component": "media.media-list",
+      "repeatable": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "firstclimb": {
+      "type": "date"
+    },
+    "lastclimb": {
+      "type": "date"
+    }
+  }
+}
