@@ -5,11 +5,11 @@ export type Climb = {
   id: number;
   title: string;
   description: string;
-  color?: string;
+  color: string;
+  climbType: string;
   thumbnail?: Media;
-  firstclimb?: string;
-  lastclimb?: string;
   media_items?: MediaItem[];
+  place: string;
 };
 
 

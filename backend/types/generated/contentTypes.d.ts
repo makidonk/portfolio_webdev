@@ -421,6 +421,9 @@ export interface ApiClimbClimb extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    climbType: Schema.Attribute.Enumeration<
+      ['sloper', 'slab', 'overhang', 'rope', 'idk']
+    >;
     color: Schema.Attribute.Enumeration<
       ['gr\u00F6n', 'bl\u00E5', 'r\u00F6d', 'svart', 'vit']
     >;
@@ -429,14 +432,40 @@ export interface ApiClimbClimb extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText &
       Schema.Attribute.DefaultTo<'Hur gick det?'>;
-    firstclimb: Schema.Attribute.Date;
-    lastclimb: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::climb.climb'> &
       Schema.Attribute.Private;
     media_items: Schema.Attribute.Component<'media.media-list', true>;
+    place: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPagePage extends Struct.CollectionTypeSchema {
+  collectionName: 'pages';
+  info: {
+    displayName: 'page';
+    pluralName: 'pages';
+    singularName: 'page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Blocks;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -984,6 +1013,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::climb.climb': ApiClimbClimb;
+      'api::page.page': ApiPagePage;
       'api::project.project': ApiProjectProject;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

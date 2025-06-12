@@ -21,6 +21,16 @@
         "vit"
       ]
     },
+    "climbType": {
+      "type": "enumeration",
+      "enum": [
+        "sloper",
+        "slab",
+        "overhang",
+        "rope",
+        "idk"
+      ]
+    },
     "description": {
       "type": "richtext",
       "default": "Hur gick det?"
@@ -40,11 +50,8 @@
         "audios"
       ]
     },
-    "firstclimb": {
-      "type": "date"
-    },
-    "lastclimb": {
-      "type": "date"
+    "place": {
+      "type": "string"
     }
   }
 }
