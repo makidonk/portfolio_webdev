@@ -6,8 +6,7 @@ export default async function ClimbsPage() {
   return (
     <>
       <main className="min-h-screen p-6 bg-white">
-        <div className="max-w-3xl mx-auto space-y-4">
-          <h1 className="text-3xl font-bold mb-4">Mina climbs!!</h1>
+        <div className="max-w-3xl mx-auto space-y-4 flex flex-row flex-wrap gap-4">
           {climbs.map((climb, i) => {
             if (!climb || !climb) return null;
             return (
@@ -15,7 +14,8 @@ export default async function ClimbsPage() {
                 key={i}
                 color={climb.color}
                 thumbnail={climb?.thumbnail}
-                climbType={climb.climbType} place={climb.place}                
+                climbType={climb.climbType}
+                place={climb.place}
               />
             );
           })}
