@@ -13,6 +13,7 @@
   "attributes": {
     "color": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "grön",
         "blå",
@@ -23,6 +24,7 @@
     },
     "climbType": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "sloper",
         "slab",
@@ -52,6 +54,15 @@
     },
     "place": {
       "type": "string"
+    },
+    "difficulty": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ]
     }
   }
 }

@@ -1,5 +1,6 @@
 import { fetchClimbs } from "@/lib/fetchClimbs";
 import ClimbCard from "../components/ClimbCard";
+import Link from "next/link";
 
 export default async function ClimbsPage() {
   const climbs = await fetchClimbs();
@@ -10,13 +11,16 @@ export default async function ClimbsPage() {
           {climbs.map((climb, i) => {
             if (!climb || !climb) return null;
             return (
-              <ClimbCard
-                key={i}
-                color={climb.color}
-                thumbnail={climb?.thumbnail}
-                climbType={climb.climbType}
-                place={climb.place}
-              />
+              // gör egna sidor href
+              <Link href={`/climbs/${climb.id}`} key={climb.id}>
+                <ClimbCard
+                  color={climb.color}
+                  thumbnail={climb?.thumbnail}
+                  climbType={climb.climbType}
+                  place={climb.place}
+                  difficulty={climb.difficulty}
+                />
+              </Link>
             );
           })}
         </div>

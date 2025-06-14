@@ -423,15 +423,19 @@ export interface ApiClimbClimb extends Struct.CollectionTypeSchema {
   attributes: {
     climbType: Schema.Attribute.Enumeration<
       ['sloper', 'slab', 'overhang', 'rope', 'idk']
-    >;
+    > &
+      Schema.Attribute.Required;
     color: Schema.Attribute.Enumeration<
       ['gr\u00F6n', 'bl\u00E5', 'r\u00F6d', 'svart', 'vit']
-    >;
+    > &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText &
       Schema.Attribute.DefaultTo<'Hur gick det?'>;
+    difficulty: Schema.Attribute.Enumeration<['easy', 'medium', 'hard']> &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::climb.climb'> &
       Schema.Attribute.Private;

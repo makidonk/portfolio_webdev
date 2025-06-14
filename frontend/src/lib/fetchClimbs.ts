@@ -3,13 +3,13 @@ import { MediaItem } from "@/types/mediaItem";
 
 export type Climb = {
   id: number;
-  title: string;
   description: string;
   color: string;
   climbType: string;
   thumbnail?: Media;
   media_items?: MediaItem[];
   place: string;
+  difficulty: string;
 };
 
 
