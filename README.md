@@ -1,7 +1,6 @@
 # Climbing Journal 🧗‍♀️
 
-A personal bouldering log built with Next.js and Strapi.  
-This app helps me keep track of climbing problems I've tried, completed, or failed – with media, notes, and difficulty filtering.
+A personal portfolio for me to display my work as a web developer and designer
 
 ---
 
@@ -15,14 +14,7 @@ This app helps me keep track of climbing problems I've tried, completed, or fail
 
 ## 📦 Features
 
-- Log climbs with:
-  - Title, color
-  - Thumbnail and multiple media entries (video/images)
-  - Notes (Markdown)
-  - Date
-- Dynamic frontend page for viewing all climbs (coming soon!)
-- Sortable/filterable (coming soon!)
-- Uses Strapi API with `populate=*` to fetch all media and data
+portfolio pieces
 
 ---
 
@@ -34,7 +26,7 @@ This app helps me keep track of climbing problems I've tried, completed, or fail
 
 ## 📂 Folder Structure
 
-first_project/
+portfolio/
 ├── frontend/ # Next.js frontend
 ├── backend/ # Strapi CMS
 └── README.md
