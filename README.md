@@ -14,7 +14,7 @@ A personal portfolio for me to display my work as a web developer and designer
 
 ## 📦 Features
 
-portfolio pieces
+portfolio pieces!
 
 ---
 
