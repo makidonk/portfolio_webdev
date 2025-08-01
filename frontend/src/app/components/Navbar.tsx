@@ -1,5 +1,4 @@
 import Link from "next/link";
-import HamburgerIcon from "./icons/HamburgerIcon";
 
 export default function Header() {
   return (
@@ -11,7 +10,6 @@ export default function Header() {
           className={` object-contain`}
         />
       </div>
-      <HamburgerIcon className="w-6 h-6" />
       <nav className="max-w-4xl text-[14px] p-4 flex flex-col justify-between items-end  space-y-1 h-[90px]">
         <Link
           href="/"
