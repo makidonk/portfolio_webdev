@@ -1,29 +1,29 @@
-
-import Link from "next/link";
-import Media from "./components/Media";
 import SplashScreen from "./components/SplashScreen";
-
-
 
 export default function HomePage() {
   return (
     <>
-      <main className="min-h-screen p-6 bg-gray-100">
-        <SplashScreen/>
-        <div className="max-w-2xl mx-auto space-y-6">
-          <h1 className="text-4xl font-bold">Hej, jag är Mathilda</h1>  
-          <p className="text-lg text-gray-700">
-            Jag är webbutvecklare. Här är min egengjorda hemsida för att logga
-            min klättring.
+      <main className="min-h-screen bg-background">
+        <SplashScreen />
+        <div className="px-[20px] flex flex-col justify-center align-center">
+          <p className="text-xl sm:text-3xl text-black  font-playfair pl-[40px] sm:pl-[60px] ">
+            hi, my name is
           </p>
-          <a
+          <p className="text-6xl sm:text-8xl md:text-[200px] text-black font-extrabold font-anton">MATHILDA</p>
+          <p className="text-xl sm:text-3xl  text-black  font-playfair pl-[20px] sm:pl-[50px]">
+            and I'm a
+          </p>
+          <p className="text-2xl sm:text-5xl text-black font-extrabold pl-[60px] sm:pl-[90px] font-anton">
+            WEB DEVELOPER
+          </p>
+
+          {/* <a
             href="/projects"
             className="inline-block bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition"
           >
-            Se mina projekt
-          </a>
+            my projects
+          </a> */}
         </div>
-        
       </main>
     </>
   );

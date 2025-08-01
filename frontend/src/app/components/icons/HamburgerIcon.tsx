@@ -5,7 +5,7 @@ export default function HamburgerIcon(props: React.SVGProps<SVGSVGElement>) {
       className="hb"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 10 10"
-      stroke="#eee"
+      stroke="#000"
       strokeWidth={0.6}
       fill="rgba(0,0,0,0)"
       strokeLinecap="round"

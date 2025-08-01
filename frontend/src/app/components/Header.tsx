@@ -1,9 +1,10 @@
 import Link from "next/link";
 import HamburgerIcon from "./icons/HamburgerIcon";
+import Navbar from "./Navbar";
 
 export default function Header() {
   return (
-    <header className="bg-[#D6D2FA] flex flex-row justify-between h-[90px]">
+    <header className="bg-background flex flex-row justify-between h-[90px]">
       <div className="flex justify-center align-center p-[20px]">
         <img
           src="./logo/logo_statisk.gif"
@@ -11,15 +12,11 @@ export default function Header() {
           className={` object-contain`}
         />
       </div>
-      <HamburgerIcon className="w-6 h-6" />
-      <nav className="max-w-4xl text-[14px] p-4 flex flex-col justify-between items-end  space-y-1 h-[90px]">
-        <Link
-          href="/"
-          className="text-[#4d4d4d] font-normal hover:font-extrabold transition-all"
-        >
-          HEM
-        </Link>
-      </nav>
+      {/* for when i have more projects: */}
+     {/*  <div className="h-full">
+        <Navbar/>
+      </div> */}
+      
     </header>
   );
 }
