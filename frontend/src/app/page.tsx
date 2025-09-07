@@ -6,14 +6,14 @@ export default function HomePage() {
       <main className="min-h-screen bg-background">
         <SplashScreen />
         <div className="px-[20px] flex flex-col justify-center align-center">
-          <p className="text-xl sm:text-3xl text-black  font-playfair pl-[40px] sm:pl-[60px] ">
+          <p className="text-[4vw] md:text-[2vw] text-black  font-playfair pl-[40px] sm:pl-[90px] leading-none">
             hi, my name is
           </p>
-          <p className="text-6xl sm:text-8xl md:text-[200px] text-black font-extrabold font-anton">MATHILDA</p>
-          <p className="text-xl sm:text-3xl  text-black  font-playfair pl-[20px] sm:pl-[50px]">
+          <p className=" text-black font-extrabold font-anton text-[23vw] md:text-[19vw] text-center lg:text-left leading-none">MATHILDA</p>
+          <p className="text-[4vw] md:text-[2vw] text-black  font-playfair pl-[20px] sm:pl-[50px] leading-none">
             and I'm a
           </p>
-          <p className="text-2xl sm:text-5xl text-black font-extrabold pl-[60px] sm:pl-[90px] font-anton">
+          <p className="text-[10vw] md:text-[7vw] text-black font-extrabold pl-[60px] sm:pl-[90px] md:pl-[130px] font-anton">
             WEB DEVELOPER
           </p>
 
